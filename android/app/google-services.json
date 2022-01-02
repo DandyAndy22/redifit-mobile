@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "452951105699",
+    "project_id": "redifit-5b503",
+    "storage_bucket": "redifit-5b503.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:452951105699:android:cc73865fe4ed4cae7adf16",
+        "android_client_info": {
+          "package_name": "com.nutrition.redifit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "452951105699-uf2g8kuisjjb3su4iqf3dmbup86303jo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKLCqkOoAy3B3gzkclwTER4nIr_bzuZ0g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "452951105699-uf2g8kuisjjb3su4iqf3dmbup86303jo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
