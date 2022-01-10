@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import '../widgets/settings.dart';
+import 'home.dart';
+import 'profile.dart';
+import 'grocery_list.dart';
 
 class Tabs extends StatefulWidget {
   const Tabs({Key? key, required this.title}) : super(key: key);
@@ -26,7 +29,9 @@ class _TabsState extends State<Tabs> {
         title: Text(widget.title),
       ),
       endDrawer: const Settings(),
-      body: const Center(),
+      body: const TabBarView(
+        children: [Home(), Profile(), GroceryList()],
+      ),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
