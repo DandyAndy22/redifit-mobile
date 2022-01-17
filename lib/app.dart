@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-// import 'screens/tabs.dart';
-import 'screens/home.dart';
+import 'screens/tabs.dart';
+// import 'screens/home.dart';
 
 class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);
@@ -12,7 +12,7 @@ class App extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const Home(), //Tabs(title: 'Demo Home Page'),
+      home: const Tabs(),
     );
   }
 }
