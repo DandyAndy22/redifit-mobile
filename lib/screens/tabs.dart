@@ -47,8 +47,8 @@ class _TabsState extends State<Tabs> {
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.business),
-            label: 'Business',
+            icon: Icon(Icons.person),
+            label: 'Profile',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.school),
