@@ -27,40 +27,42 @@ class _HomeState extends State<Home> {
                       });
                     }),
                 DataTable(
-                  columnSpacing: 40,
-                  columns: const [
-                    DataColumn(
-                        label: Text('Calories',
-                            style: TextStyle(
-                                fontSize: 18, fontWeight: FontWeight.bold))),
-                    DataColumn(
-                        label: Text('Fat',
-                            style: TextStyle(
-                                fontSize: 18, fontWeight: FontWeight.bold))),
-                    DataColumn(
-                        label: Text('Carbs',
-                            style: TextStyle(
-                                fontSize: 18, fontWeight: FontWeight.bold))),
-                    DataColumn(
-                        label: Text('Protein',
-                            style: TextStyle(
-                                fontSize: 18, fontWeight: FontWeight.bold))),
-                  ],
-                  rows: const [
-                    DataRow(cells: [
-                      DataCell(Text('24')),
-                      DataCell(Text('456')),
-                      DataCell(Text('45')),
-                      DataCell(Text('13')),
-                    ]),
-                    DataRow(cells: [
-                      DataCell(Text('5')),
-                      DataCell(Text('John')),
-                      DataCell(Text('Student')),
-                      DataCell(Text('Student')),
-                    ]),
-                  ],
-                ),
+                    columnSpacing: 40,
+                    columns: const [
+                      DataColumn(
+                          label: Text('Calories',
+                              style: TextStyle(
+                                  fontSize: 18, fontWeight: FontWeight.bold))),
+                      DataColumn(
+                          label: Text('Fat',
+                              style: TextStyle(
+                                  fontSize: 18, fontWeight: FontWeight.bold))),
+                      DataColumn(
+                          label: Text('Carbs',
+                              style: TextStyle(
+                                  fontSize: 18, fontWeight: FontWeight.bold))),
+                      DataColumn(
+                          label: Text('Protein',
+                              style: TextStyle(
+                                  fontSize: 18, fontWeight: FontWeight.bold))),
+                    ],
+                    rows: _state
+                        ? const [
+                            DataRow(cells: [
+                              DataCell(Text('2098')),
+                              DataCell(Text('81')),
+                              DataCell(Text('159')),
+                              DataCell(Text('183')),
+                            ]),
+                          ]
+                        : const [
+                            DataRow(cells: [
+                              DataCell(Text('2689')),
+                              DataCell(Text('81')),
+                              DataCell(Text('307')),
+                              DataCell(Text('183')),
+                            ]),
+                          ]),
                 const Text("Fasting for X days"),
                 const Text("Weekly Target"),
                 DataTable(
@@ -85,17 +87,17 @@ class _HomeState extends State<Home> {
                   ],
                   rows: const [
                     DataRow(cells: [
-                      DataCell(Text('1')),
-                      DataCell(Text('Stephen')),
-                      DataCell(Text('Actor')),
-                      DataCell(Text('Actor')),
+                      DataCell(Text('17050')),
+                      DataCell(Text('568')),
+                      DataCell(Text('1705')),
+                      DataCell(Text('1279')),
                     ]),
-                    DataRow(cells: [
-                      DataCell(Text('5')),
-                      DataCell(Text('John')),
-                      DataCell(Text('Student')),
-                      DataCell(Text('Student')),
-                    ]),
+                    // DataRow(cells: [
+                    //   DataCell(Text('5')),
+                    //   DataCell(Text('John')),
+                    //   DataCell(Text('Student')),
+                    //   DataCell(Text('Student')),
+                    // ]),
                   ],
                 ),
               ]);
