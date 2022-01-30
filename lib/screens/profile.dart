@@ -8,21 +8,49 @@ class Profile extends StatefulWidget {
 }
 
 class _ProfileState extends State<Profile> {
-  final List<Item> _data = generateItems(8);
+  final List<Item> _data = [
+    Item(
+      headerValue: 'About Me',
+      expandedValue: 'Sex: Male\nAge: 29\nHeight: 6\u0027\nWeight: 187lbs\n',
+    ),
+    Item(
+      headerValue: 'Diet Details',
+      expandedValue:
+          'Activity Level: Moderate\nGoal: Lose Fat\nDiet: Standard\nCarb Cycling: Enabled',
+    ),
+    Item(
+      headerValue: 'Summary',
+      expandedValue:
+          'My performance highlights could live here!\n(Perhaps as a graph?)',
+    )
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(children: [
-        Row(children: const [
-          Text("I'll be an Image soon. Probably use ClipRRect."),
-          Text("My Name"),
-        ]),
-        SingleChildScrollView(
-          child: Container(
-            child: _buildPanel(),
+        Row(children: [
+          Container(
+            width: 200,
+            height: 200,
+            decoration: const BoxDecoration(
+              shape: BoxShape.circle,
+              image: DecorationImage(
+                  image: NetworkImage(
+                      'https://googleflutter.com/sample_image.jpg'),
+                  fit: BoxFit.fill),
+            ),
           ),
-        ),
+          const Text(
+            "John Doe",
+            textAlign: TextAlign.right,
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 28),
+          ),
+        ]),
+        Expanded(
+            child: SingleChildScrollView(
+          child: _buildPanel(),
+        )),
       ]),
     );
   }
@@ -69,13 +97,4 @@ class Item {
   String expandedValue;
   String headerValue;
   bool isExpanded;
-}
-
-List<Item> generateItems(int numberOfItems) {
-  return List<Item>.generate(numberOfItems, (int index) {
-    return Item(
-      headerValue: 'Panel $index',
-      expandedValue: 'This is item number $index',
-    );
-  });
 }
