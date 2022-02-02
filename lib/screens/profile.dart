@@ -70,15 +70,10 @@ class _ProfileState extends State<Profile> {
             );
           },
           body: ListTile(
-              title: Text(item.expandedValue),
-              subtitle:
-                  const Text('To delete this panel, tap the trash can icon'),
-              trailing: const Icon(Icons.delete),
-              onTap: () {
-                setState(() {
-                  _data.removeWhere((Item currentItem) => item == currentItem);
-                });
-              }),
+            title: Text(item.expandedValue),
+            trailing: const Icon(Icons.delete),
+            // onTap: () {setState(() {});}
+          ),
           isExpanded: item.isExpanded,
         );
       }).toList(),
