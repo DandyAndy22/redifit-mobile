@@ -56,6 +56,15 @@ class Settings extends StatelessWidget {
               Navigator.pop(context);
             },
           ),
+          ListTile(
+            title: const Text('Sign Out',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
+            onTap: () {
+              // Update the state of the app.
+              // ...
+              Navigator.pop(context);
+            },
+          ),
         ],
       ),
     );
