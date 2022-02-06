@@ -51,8 +51,8 @@ class _TabsState extends State<Tabs> {
             label: 'Profile',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.school),
-            label: 'School',
+            icon: Icon(Icons.local_grocery_store),
+            label: 'Groceries',
           ),
         ],
         currentIndex: _selectedIndex,

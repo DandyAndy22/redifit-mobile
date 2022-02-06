@@ -11,7 +11,10 @@ class _GroceryListState extends State<GroceryList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(),
+      body: Column(children: const [
+        Text("I'll probably be a list of groceries soon, exciting!",
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24)),
+      ]),
     );
   }
 }
