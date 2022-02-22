@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../widgets/settings.dart';
 import 'home.dart';
 import 'profile.dart';
-import 'grocery_list.dart';
+import 'learning_center.dart';
 
 class Tabs extends StatefulWidget {
   const Tabs({Key? key}) : super(key: key);
@@ -22,7 +22,7 @@ class _TabsState extends State<Tabs> {
       'page': const Profile(),
     },
     {
-      'page': const GroceryList(),
+      'page': const LearningCenter(),
     }
   ];
 
@@ -52,7 +52,7 @@ class _TabsState extends State<Tabs> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.local_grocery_store),
-            label: 'Groceries',
+            label: 'Learning',
           ),
         ],
         currentIndex: _selectedIndex,
