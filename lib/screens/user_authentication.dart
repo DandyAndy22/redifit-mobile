@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class SetupCredentials extends StatefulWidget {
-  const SetupCredentials({Key? key}) : super(key: key);
+class UserAuthentication extends StatefulWidget {
+  const UserAuthentication({Key? key}) : super(key: key);
 
   @override
-  _SetupCredentialsState createState() => _SetupCredentialsState();
+  _UserAuthenticationState createState() => _UserAuthenticationState();
 }
 
-class _SetupCredentialsState extends State<SetupCredentials> {
+class _UserAuthenticationState extends State<UserAuthentication> {
   final formKey = GlobalKey<FormState>();
 
   @override
@@ -37,47 +37,13 @@ class _SetupCredentialsState extends State<SetupCredentials> {
               TextFormField(
                 autofocus: true,
                 decoration: const InputDecoration(
-                    labelText: 'Confirm Email Address',
-                    border: OutlineInputBorder()),
-                onSaved: (value) {
-                  // Store value in DTO (?)
-                },
-                validator: (value) {
-                  if (value!.isEmpty) {
-                    return 'Please verify your email address';
-                  } else {
-                    return null;
-                  }
-                },
-              ),
-              const SizedBox(height: 10),
-              TextFormField(
-                autofocus: true,
-                decoration: const InputDecoration(
                     labelText: 'Create Password', border: OutlineInputBorder()),
                 onSaved: (value) {
                   // Store value in DTO (?)
                 },
                 validator: (value) {
                   if (value!.isEmpty) {
-                    return 'Please enter a password';
-                  } else {
-                    return null;
-                  }
-                },
-              ),
-              const SizedBox(height: 10),
-              TextFormField(
-                autofocus: true,
-                decoration: const InputDecoration(
-                    labelText: 'Confirm Password',
-                    border: OutlineInputBorder()),
-                onSaved: (value) {
-                  // Store value in DTO (?)
-                },
-                validator: (value) {
-                  if (value!.isEmpty) {
-                    return 'Please confirm your password';
+                    return 'Please enter your password';
                   } else {
                     return null;
                   }
