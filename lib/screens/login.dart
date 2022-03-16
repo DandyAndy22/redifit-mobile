@@ -10,10 +10,10 @@ class Login extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Supabase Authentication'),
+        title: const Text('Welcome to RediFit!'),
       ),
       body: Column(children: [
-        const Text("Welcome to RediFit!"),
+        const Text("Your one stop shop for diet planning and tracking."),
         Center(
           child: ElevatedButton(
             child: const Text('Sign Up'),
