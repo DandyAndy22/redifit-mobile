@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'authenticate_email.dart';
 
 class SetupCredentials extends StatefulWidget {
   const SetupCredentials({Key? key}) : super(key: key);
@@ -13,8 +14,9 @@ class _SetupCredentialsState extends State<SetupCredentials> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        resizeToAvoidBottomInset: false,
         appBar: AppBar(
-          title: const Text('Welcome to RediFit!'),
+          title: const Text('Setup Your Credentials'),
         ),
         body: Form(
             key: _formKey,
@@ -25,12 +27,57 @@ class _SetupCredentialsState extends State<SetupCredentials> {
                       const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
                   child: TextFormField(
                     decoration: const InputDecoration(
-                      border: UnderlineInputBorder(),
+                      border: OutlineInputBorder(),
                       labelText: 'Enter your username',
                     ),
                     validator: (value) {
                       if (value == null || value.isEmpty) {
-                        return 'Please enter some text';
+                        return 'Please enter a username';
+                      }
+                      return null;
+                    },
+                  )),
+              Padding(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+                  child: TextFormField(
+                    decoration: const InputDecoration(
+                      border: OutlineInputBorder(),
+                      labelText: 'Enter your email address',
+                    ),
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return 'Please enter an email address';
+                      }
+                      return null;
+                    },
+                  )),
+              Padding(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+                  child: TextFormField(
+                    decoration: const InputDecoration(
+                      border: OutlineInputBorder(),
+                      labelText: 'Enter your password',
+                    ),
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return 'Please enter a password';
+                      }
+                      return null;
+                    },
+                  )),
+              Padding(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+                  child: TextFormField(
+                    decoration: const InputDecoration(
+                      border: OutlineInputBorder(),
+                      labelText: 'Confirm your password',
+                    ),
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return 'Please confirm your password';
                       }
                       return null;
                     },
@@ -44,12 +91,14 @@ class _SetupCredentialsState extends State<SetupCredentials> {
                       if (_formKey.currentState!.validate()) {
                         // If the form is valid, display a snackbar. In the real world,
                         // you'd often call a server or save the information in a database.
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(content: Text('Processing Data')),
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const AuthenticateEmail()),
                         );
                       }
                     },
-                    child: const Text('Submit'),
+                    child: const Text('Continue'),
                   )),
             ])));
   }
