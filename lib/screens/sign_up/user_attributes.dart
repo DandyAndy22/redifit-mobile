@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'diet_preferences.dart';
 
 class UserAttributes extends StatefulWidget {
   const UserAttributes({Key? key}) : super(key: key);
@@ -13,6 +14,7 @@ class _UserAttributesState extends State<UserAttributes> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        resizeToAvoidBottomInset: false,
         appBar: AppBar(
           title: const Text('Welcome to RediFit!'),
         ),
@@ -25,12 +27,72 @@ class _UserAttributesState extends State<UserAttributes> {
                       const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
                   child: TextFormField(
                     decoration: const InputDecoration(
-                      border: UnderlineInputBorder(),
-                      labelText: 'Enter your username',
+                      border: OutlineInputBorder(),
+                      labelText: 'Enter your name',
                     ),
                     validator: (value) {
                       if (value == null || value.isEmpty) {
-                        return 'Please enter some text';
+                        return 'Please enter your name';
+                      }
+                      return null;
+                    },
+                  )),
+              Padding(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+                  child: TextFormField(
+                    decoration: const InputDecoration(
+                      border: OutlineInputBorder(),
+                      labelText: 'Indicate your sexual orientation',
+                    ),
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return 'Please make a selection';
+                      }
+                      return null;
+                    },
+                  )),
+              Padding(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+                  child: TextFormField(
+                    decoration: const InputDecoration(
+                      border: OutlineInputBorder(),
+                      labelText: 'Enter your age',
+                    ),
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return 'Please provide select your age';
+                      }
+                      return null;
+                    },
+                  )),
+              Padding(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+                  child: TextFormField(
+                    decoration: const InputDecoration(
+                      border: OutlineInputBorder(),
+                      labelText: 'Select your height',
+                    ),
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return 'Please select your height';
+                      }
+                      return null;
+                    },
+                  )),
+              Padding(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+                  child: TextFormField(
+                    decoration: const InputDecoration(
+                      border: OutlineInputBorder(),
+                      labelText: 'Select your weight',
+                    ),
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return 'Please select your weight';
                       }
                       return null;
                     },
@@ -42,10 +104,10 @@ class _UserAttributesState extends State<UserAttributes> {
                     onPressed: () {
                       // Validate returns true if the form is valid, or false otherwise.
                       if (_formKey.currentState!.validate()) {
-                        // If the form is valid, display a snackbar. In the real world,
-                        // you'd often call a server or save the information in a database.
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(content: Text('Processing Data')),
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const DietPreferences()),
                         );
                       }
                     },
