@@ -10,9 +10,8 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'RediFit',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme:
+          ThemeData(primarySwatch: Colors.lightBlue, fontFamily: 'EB Garamond'),
       home: const Login(),
     );
   }

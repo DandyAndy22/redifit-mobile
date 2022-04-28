@@ -9,12 +9,12 @@ class Insets {
 }
 
 class Fonts {
-  static const String raleway = 'Raleway';
+  static const String ebGaramond = 'EB Garamond';
 }
 
 class TextStyles {
-  static const TextStyle raleway = TextStyle(
-    fontFamily: Fonts.raleway,
+  static const TextStyle ebGaramond = TextStyle(
+    fontFamily: Fonts.ebGaramond,
   );
   static TextStyle buttonText1 =
       const TextStyle(fontWeight: FontWeight.bold, fontSize: 14);
@@ -25,5 +25,5 @@ class TextStyles {
   static TextStyle h2 =
       const TextStyle(fontWeight: FontWeight.bold, fontSize: 16);
   static late TextStyle body1 =
-      raleway.copyWith(color: const Color(0xFF42A5F5));
+      ebGaramond.copyWith(color: const Color(0xFF42A5F5));
 }
